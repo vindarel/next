@@ -2,8 +2,8 @@ image: daewok/lisp-devel
 
 before_script:
     - apt update
-    - apt search git-core libwebkit2gtk-4.0
-    - apt install -y git-core libwebkit2gtk-4.0
+    - apt search git-core libwebkit2gtk-4.0-dev
+    - apt install -y git-core libwebkit2gtk-4.0-dev
     - git clone https://github.com/next-browser/cl-webkit ~/quicklisp/local-projects/cl-webkit/
 
 stages:
@@ -14,5 +14,6 @@ build:
   script:
     - cd next && make build-gtk
   artifacts:
+    # binary for Debian Jessie. The user needs to install libwebkit2gtk-4.0-dev
     paths:
       - next/source/next-gtk
