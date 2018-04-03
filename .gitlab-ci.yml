@@ -1,0 +1,18 @@
+image: daewok/lisp-devel
+
+before_script:
+    - apt update
+    - apt search git-core libwebkit2gtk-4.0
+    - apt install -y git-core libwebkit2gtk-4.0
+    - git clone https://github.com/next-browser/cl-webkit ~/quicklisp/local-projects/cl-webkit/
+
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - cd next && make build-gtk
+  artifacts:
+    paths:
+      - next/source/next-gtk
