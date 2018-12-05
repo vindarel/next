@@ -16,10 +16,9 @@ RUN make all
 
 # the doc says make all is enough but I need this
 RUN make gtk-webkit
-# also calling ./next fails: can't find next-gtk
 
-# TODO: run the two binaries
-CMD ./next
+# XXX: this shows a blank window and loops on "Polling platform port..."
+CMD cp ports/gtk-webkit/next-gtk-webkit /usr/local/bin/ && ./next
 
 # and how to *see* the X11 GUI ?
 # https://blog.jessfraz.com/post/docker-containers-on-the-desktop/
