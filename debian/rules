@@ -26,9 +26,10 @@ binary:
 	echo $(DESTDIR)
 	make install DESTDIR=$(DESTDIR)
 
-	# dh_installdeb
+	dh_installdeb
 	# dh_gencontrol
 	# dh_md5sums
+	# dh_builddeb  # only binary packages ?
 
 # override_dh_auto_binary:
 	# make install
