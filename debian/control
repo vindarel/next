@@ -17,9 +17,9 @@ Depends: sbcl (>= 1.4.2),
          glib-networking,
          sqlite,
          gsettings-desktop-schemas,
-         libfixposix,
-         gstreamer,
-         gst-plugins-base-1.0,
+         libfixposix-dev,
+         libgstreamer1.0-0,
+         gir1.2-gst-plugins-base-1.0,
          xclip,
          ${misc:Depends}
 Description: Next, the infinitely extensible web browser.
