@@ -6,8 +6,7 @@ Build with
 
 Files are created one directory up.
 
-_status_:  the .deb  builds, =next-gtk-webkit=  only prints  "starting
-platform port".
+_status_: the .deb builds, but running =next= only drops us to a SBCL REPL.
 
 
 https://www.debian.org/doc/manuals/maint-guide/
